@@ -1,0 +1,22 @@
+defaultNamespace: akri
+
+labels: 
+  app: akri-devices
+
+helm:
+  chart: ./chart
+  releaseName: akri-devices
+
+dependsOn:
+- selector:
+    matchLabels:
+      app: akri
+
+targetCustomizations:
+- name: sdr
+  clusterSelector:
+    matchLabels:
+      peripheral: sdr
+  helm:
+    valuesFiles:
+    - values-sdr.yaml

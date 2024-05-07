@@ -1,0 +1,7 @@
+devices: 
+
+# RTL-SDR
+- name: sd-radio
+  capacity: 1
+  vendorID: "0bda"
+  productID: "2838"

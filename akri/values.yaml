@@ -1,0 +1,7 @@
+kubernetesDistro: k3s
+onvif:
+  discovery:
+    enabled: true
+udev:
+  discovery:
+    enabled: true

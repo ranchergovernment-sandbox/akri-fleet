@@ -1,0 +1,6 @@
+devices: []
+# - name: logitech
+#   capacity: 1
+#   vendorID: 046d
+#   productID: 0892
+#   handlerName: udev

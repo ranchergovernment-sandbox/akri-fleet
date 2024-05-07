@@ -1,0 +1,12 @@
+defaultNamespace: akri
+
+labels:
+  app: akri
+
+helm:
+  repo: https://project-akri.github.io/akri
+  chart: akri
+  version: 0.12.20
+  releaseName: akri
+  valuesFiles:
+  - values.yaml

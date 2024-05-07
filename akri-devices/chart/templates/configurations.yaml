@@ -1,0 +1,16 @@
+{{- range .Values.devices }}
+---
+apiVersion: akri.sh/v0
+kind: Configuration
+metadata:
+  name: akri-{{ .name }}
+spec:
+  capacity: {{ .capacity }}
+  discoveryHandler:
+    discoveryDetails: |
+      groupRecursive: false
+      udevRules:
+      - ATTR{idVendor}=={{ .vendorID | quote }}
+      - ATTR{idProduct}=={{ .productID | quote }}
+    name: {{ .handlerName | default "udev" }}
+{{- end }}
